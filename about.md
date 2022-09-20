@@ -8,7 +8,7 @@ Some information about you!
 
 ### More Information
 
-Female Career Switcher. 
+I Am A Female Career Switcher. 
 It's never too late to change.
 
 ### Contact me
