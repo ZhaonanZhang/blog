@@ -8,12 +8,16 @@ title: LeetCode 203 Remove Linked List Elements (Java)
 [LeetCode](https://leetcode.com/problems/remove-linked-list-elements/):
 Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
 
+
+
+###### Image from Leetcode
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/92517160/192067588-728b2c45-f50a-42e1-9678-1f39dc642b33.png">
 
-image from Leetcode
 
+
+
+###### Animation from [Zybooks](https://learn.zybooks.com/zybook/ProgrammingInJavaR63/chapter/8/section/2?content_resource_id=61940303)
 <img width="908" alt="image" src="https://user-images.githubusercontent.com/92517160/192069444-9dbb9456-06c4-4e85-a4f7-c7f23d3bb6b9.png">
-Animation from [Zybooks](https://learn.zybooks.com/zybook/ProgrammingInJavaR63/chapter/8/section/2?content_resource_id=61940303)
 
 #### Thought
 
