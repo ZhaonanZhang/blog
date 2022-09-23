@@ -19,8 +19,8 @@ Animation from [Zybooks](https://learn.zybooks.com/zybook/ProgrammingInJavaR63/c
 
 - I have tried to implement this in C++ before but this i smy first time using Java to solve it.
 - Rather than using pointer, Java ListNode has a filed Next as a **reference** point to the next value in the linked list.
-- Useful youtube **link** [#5 Linked List Implementation in Java Part 1 | Data Structures ](https://www.youtube.com/watch?v=SMIq13-FZSE&t=824s)
-- Another **useful link** in Chinese from Carl [手把手带你学会操作链表 | LeetCode：203.移除链表元素](https://www.bilibili.com/video/BV18B4y1s7R9/)
+- Useful youtube **link** [#5 Linked List Implementation in Java Part 1 Data Structures ](https://www.youtube.com/watch?v=SMIq13-FZSE&t=824s)
+- Another **useful link** in Chinese from Carl [手把手带你学会操作链表](https://www.bilibili.com/video/BV18B4y1s7R9/)
 - I have tried to understand this data staructure by drawing on the paper with understanding of memory location usesage. 
 - Using dummy node can keep consistance of treversing to remove target elments from the list. In this case, head will stay the same, instaed dummy and currNode will keep traversing until the end of the list. 
 - Hint for this challenge will be returning **dummy.next**;
