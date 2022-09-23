@@ -67,11 +67,8 @@ class Solution {
             else{
                 currNode = currNode.next;
             }
-
         }
-
-        return dummy.next;
-        
+        return dummy.next;    
     }
 }
 ```
