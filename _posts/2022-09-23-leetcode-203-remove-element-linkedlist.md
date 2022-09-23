@@ -12,15 +12,17 @@ Given the head of a linked list and an integer val, remove all the nodes of the 
 
 #### Thought
 
-To solve this problem, first of all is to understand the given constraint: 
-- All the integers in nums are **positive**.
-- Return a **contiguous subarray**.
-- Whenever it's about looking for a contiguous subarray with all non negtive arrays, sliding window method should **flag up**. 
-- Sliding window is a special **two pointers methods**.
-- I found a youtube video is **particularly useful** with great explanation and useful whiteboarding graphs: [TECH DOSE](https://www.youtube.com/watch?v=S6Xg-0uaODc)
-- This is my first time trying to implement sliding window method. It's fun!!!
+- I have tried to implement this in C++ before but this i smy first time using Java to solve it.
+- Rather than using pointer, Java ListNode has a filed Next as a **reference** to next value in the linked list.
+- Useful youtube **link** [#5 Linked List Implementation in Java Part 1 | Data Structures ](https://www.youtube.com/watch?v=SMIq13-FZSE&t=824s)
+- Another **useful link** in Chinese from Carl [手把手带你学会操作链表 | LeetCode：203.移除链表元素](https://www.bilibili.com/video/BV18B4y1s7R9/)
+- I have tried to understand this data staructure by drawing on the paper with understanding of memory location useage. 
+- Using dummy node can keep consistance of treversing to remove target elments from the list. In this case, head will stay the same, instaed dummy and currNode will keep traversing until the end of the list. 
+- Hint for this challenge will be returning **dummy.next**;
+
+
 #### Steps:
--Update soon
+- 
 
 #### Solution: Java
 
