@@ -38,6 +38,7 @@ Given a linked list, swap every two adjacent nodes and return its head. You must
 - To swap the first pair. 
 **First**, Setup a temp to mark the Node1(currNode.next) and set up a temp1 to mark the Node3(currNode.next.next)
 **Second**, make dummyHead point to Node2, then Node2 point to Node1, lastly make Node1 point to Node3. **dummyHead->Node2-> Node1-> Node3-> Node4-> Node5**
+- In the loop, move the pointer(currNode to right 2 Nodes).
 - Return dummyHead.next
 
 #### Solution: Java
