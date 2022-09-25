@@ -24,43 +24,40 @@ Given a linked list, swap every two adjacent nodes and return its head. You must
 - 7, Lastly, consider the retuen value. Go back to the question to make sure the correct type has been returned. 
 - 8, For this problem, swaping the Nodes but not updating the value of the Nodes. This means we just need to updating the linking pointers.
 
-- **useful link** in Chinese from Carl [帮你把链表细节学清楚 两两交换链表中的节点](https://www.bilibili.com/video/BV1YT411g7br/?spm_id_from=333.788)
+- **Useful link** in Chinese from Carl [帮你把链表细节学清楚 两两交换链表中的节点](https://www.bilibili.com/video/BV1YT411g7br/?spm_id_from=333.788)
 
 
 #### Pseudocode (single pointer):
 - Example original inked list: **Node1-> Node2-> Node3-> Node4-> Node5**
 - Initialise a dummy head, and dummy should point to the head. **dummyHead->Node1-> Node2-> Node3-> Node4-> Node5**
 - Initialise a pointer, currNode, starting position at dummy.
-- When to stop move currNode? Consider the size of the list (number of nodes in the list)
--       A: If size is even: currNode stops 2 nodes before the tail (That's the last pair of the Nodes): currNode.next.next = null;
--       B: If size is odd: currNode stops 1 nodes before the tail(There is not enough node to pair): currNode.next = null; 
+- When to stop move currNode? Consider the **size** of the list (number of nodes in the list)
+-       A: size is even: currNode stops 2 nodes before the tail (That's the last pair of the Nodes): currNode.next.next = null;
+-       B: size is odd: currNode stops 1 nodes before the tail(There is not enough node to pair): currNode.next = null; 
 - In a while loop (Meet both A&&B loop will break) 
 - To swap the first pair. 
 **First**, Setup a temp to mark the Node1(currNode.next) and set up a temp1 to mark the Node3(currNode.next.next)
 **Second**, make dummyHead point to Node2, then Node2 point to Node1, lastly make Node1 point to Node3. **dummyHead->Node2-> Node1-> Node3-> Node4-> Node5**
 - Return dummyHead.next
-- 
+
 #### Solution: Java
 
 ```
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+//LeetCode 24. Swap Nodes in Pairs
+//Given a linked list, swap every two adjacent nodes and return its head.
+// You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
 
-//dummyNode -> Node1 -> Node2 -> Node3 -> Node4...
+// dummyNode -> Node1 -> Node2 -> Node3 -> Node4...
 //dummyNode -> Node2 -> Node1 -> Node3 -> Node4
-//algorithem is  : dummy point to 2, then 2 point to 1, then 1 point to 3;
-class Solution {
+// algorithm is  : dummy point to 2, then 2 point to 1, then 1 point to 3; 
+
+import com.leetcode.linkedlist.ListNode;
+
+public class SwapPairs {
     public ListNode swapPairs(ListNode head) {
         ListNode dummyHead = new ListNode(-1);
         dummyHead.next = head;
+
         // single pointer methods(using currNode as a pointer)
         ListNode currNode = dummyHead;
         while(currNode.next != null && currNode.next.next != null){
@@ -73,7 +70,24 @@ class Solution {
 
             currNode = currNode.next.next; //move currNode right 2 nodes(position);
         }
+
+
+        // two pointer methods (using preNode and head as two pointers, preNode is dummyNode, head is Node1)
+//        ListNode preNode = dummyHead;
+//        while(preNode.next != null && preNode.next.next != null){
+//            ListNode tempNode = head.next.next; // Here use only 1 tempNode to mark Node3;
+//
+//            preNode.next = head.next; // head.next is now Node2, so this is to preNode point to Node2; so dummy point to 2
+//            head.next.next = head; //head.next now is Node2, so make Node2.next to head(which is Node1); so 2 point to 1
+//            head.next = tempNode; // so 1 point to 3;
+//
+//            preNode = head;  // move pointer preNode to right 2 position
+//            head = head.next; //move head to right 1 position; preNode and head is next to each other;
+
+//        }
+
         return dummyHead.next;
+
     }
 }
 ```
