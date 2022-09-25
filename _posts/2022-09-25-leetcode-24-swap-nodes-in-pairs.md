@@ -15,11 +15,16 @@ Given a linked list, swap every two adjacent nodes and return its head. You must
 
 
 #### Thought
-
-- I have tried to implement this in C++ before but this is my first time using Java to solve it.
-- Rather than using pointer, Java ListNode has a filed Next as a **reference** point to the next value in the linked list.
-- Useful youtube **link** [#5 Linked List Implementation in Java Part 1 Data Structures ](https://www.youtube.com/watch?v=SMIq13-FZSE&t=824s)
-- Another **useful link** in Chinese from Carl [手把手带你学会操作链表](https://www.bilibili.com/video/BV18B4y1s7R9/)
+- 1, There are two methods to solve this problem which is setting up single pointer or two pointers. Single pointer method is slightly easier to understand. Please see the comments in nodes which indicating both methods.
+- 2, Consider first: Do I need a dummy head? Do I need a pointer(currNode)? How to find the Nodes I want to operate on?
+- 3, REMEMBER: the pointer is always point to the previous node where the target Node is. In this case, I need to swap pairs, therefore, using two pointer is possible. 
+- 4, So where(currNode) pointer should start or what's it initial position shoule be? Well, we are operating on the Head node and the Node after as a pair, so we'd better set up a Dummy head and the pointer should point to the Dummy Head too (as the reason been explained from previous thought).
+- 5, Next, how do we swap ONE pair of nodes? Using a pen and paper to illustrate the process can be very useful.
+- 6, After successfully swap a pair, how do we move the pointer to next pair? And how many position should it move? Should we use a loop?
+- 7, Lastly, consider the retuen value. Go back t the question to make sure return the correct type. 
+- 8, For this problem, swaping the Nodes but not updating the value of the Nodes, this is means just need to updating the linking pointers.
+- 5, Useful youtube **link** [#5 Linked List Implementation in Java Part 1 Data Structures ](https://www.youtube.com/watch?v=SMIq13-FZSE&t=824s)
+- Another **useful link** in Chinese from Carl [手把手带你学会操作链表](https://www.bilibili.com/video/BV1YT411g7br/?spm_id_from=333.788)
 - I have tried to understand this data staructure by drawing on the paper with understanding of memory location usesage. 
 - Using dummy node can keep consistance of treversing to remove target elments from the list. In this case, head will stay the same, instaed dummy and currNode will keep traversing until the end of the list. 
 - Hint for this challenge will be returning **dummy.next**;
