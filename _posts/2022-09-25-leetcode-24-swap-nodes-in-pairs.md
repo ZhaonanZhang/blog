@@ -25,6 +25,7 @@ Given a linked list, swap every two adjacent nodes and return its head. You must
 - 8, For this problem, swaping the Nodes but not updating the value of the Nodes. This means we just need to updating the linking pointers.
 
 - **Useful link** in Chinese from Carl [帮你把链表细节学清楚 两两交换链表中的节点](https://www.bilibili.com/video/BV1YT411g7br/?spm_id_from=333.788)
+- **Useful link** [Inspiring Solutions in Python](https://ttzztt.gitbooks.io/lc/content/linked-list/swap-nodes-in-pairs.html)
 
 
 #### Pseudocode (single pointer):
