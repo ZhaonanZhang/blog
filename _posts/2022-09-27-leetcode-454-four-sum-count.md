@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: LeetCode 454. 4Sum II (Java)
+title: LeetCode 454 Four Sum Count (Java)
 ---
 
 #### Problem : Medium
