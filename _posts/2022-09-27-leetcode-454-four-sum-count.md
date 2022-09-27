@@ -27,48 +27,44 @@ nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
 
 
 #### pseudocode:
-- Check if the head node exsits, if not return head;
-- Initialise a new node: dummy node
-- Dummy will point to the head
-- Initialise another node as **currNode = dummy**
-- Using while loop (Condition is currNode.next != null) to loop until find the target value
-- When loop finishes(when currNode point to null), return **dummy.next**
+- if a is an element from nums1, b is an element from nums2, b is an element from nums3, d is an element from nums4;
+- Set up a new HashMap, key will be sum of a+b, and value will be the times they exists ;
+- Loop through nums1 and nums2, to moniter the key and value and save them in the HashMap;
+- Calculate the sum of c+d, and search through the map to see if 0-(c+d) exists, and count along.
+
 
 #### Solution: Java
 
 ```
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 
 class Solution {
-    public ListNode removeElements(ListNode head, int val) {
+    public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
+        int result = 0;
+        Map<Integer, Integer> firstMap = new HashMap();
 
-        if(head == null){
-            return head;
-        }
-
-        ListNode dummy = new ListNode();
-        dummy.next = head;
-        ListNode currNode = dummy;
-
-        while (currNode.next != null ){
-            if(currNode.next.val == val) {
-                currNode.next = currNode.next.next;
+        for(int i : nums1){
+            for(int j: nums2){
+                int temp1= i+j;
+                if(firstMap.containsKey(temp1)){
+                    firstMap.put(temp1, firstMap.get(temp1) +1 );
+                }
+                else{
+                    firstMap.put(temp1, 1);
+                }
 
             }
-            else{
-                currNode = currNode.next;
+        }
+
+        for(int k: nums3){
+            for(int l: nums4){
+                int temp2 = k+l;
+                if(firstMap.containsKey(0-temp2)){
+                    result= result+ firstMap.get(0-temp2);
+                }
             }
         }
-        return dummy.next;    
+
+        return result;
     }
 }
 ```
