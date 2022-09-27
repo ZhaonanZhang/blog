@@ -89,7 +89,6 @@ public class SwapPairs {
 //        }
 
         return dummyHead.next;
-
     }
 }
 ```
