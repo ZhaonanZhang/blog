@@ -1,7 +1,6 @@
 
 ---
-layout: post
-title: LeetCode 454 Four Sum Count (Java)
+LeetCode 454 Four Sum Count (Java)
 ---
 
 #### Problem : Medium
@@ -73,6 +72,8 @@ class Solution {
 
 
 For more instructions head over to the [LeetCode](https://leetcode.com/).
+
+
 
 
 
