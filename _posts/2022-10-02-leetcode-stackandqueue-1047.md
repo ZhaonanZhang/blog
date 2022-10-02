@@ -18,29 +18,35 @@ Return the final string after all such duplicate removals have been made. It can
 
 #### Thought
 
-- This an easy problem if using two pointers (indexing);
-- One pointer from the start of the string ( left) , One from the end of the string (right) , both traversing to the middle and swapping the char along the way.
-- The key point will be when do we stop swapping the front element with the back element. Either using while loop, condition will be while **(left <right)**, here doesn't have to consider left == right because when they meet, there is no need to swap. Or using for loop, condition will be **(int i< length/2-1)**. 
+- Stack is a perfect data structure for this problem.
+- It's to elimanate the the pair(same) charactors in orders.
+- Pairing process may concider using stack or queue.
 
 
 #### Solution: Java
 
 ```
 class Solution {
-    public void reverseString(char[] s) {
-        int l = 0;
-        int r = s.length-1;
-        for(int i=0; i<s.length/2 ; i++){
-            char temp = s[l];
-            s[l] = s[r];
-            s[r] = temp;
-            l++;
-            r--;
+    public String removeDuplicates(String s) {
+        Deque<Character> deque = new ArrayDeque<>();
+        char[] ch = s.toCharArray();
+        //check all char in ch, push if deque is empty or deque has no such a char
+        for(char c: ch) {
+            if (deque.isEmpty() || deque.peek() != c) {
+                deque.push(c);
+            } else {
+                deque.pop(); //if another same char found, pop the first char out too because they are the pair should not exist in result.
+            }
         }
-    }
+        String s1 = "";
+        while (!deque.isEmpty()) {
+            s1 = deque.pop() + s1;
+        }
+        return s1;
+    }       
 }
 
 ```
 
 
-For more instructions head over to the [LeetCode](https://leetcode.com/problems/search-insert-position/).
+For more instructions head over to the [LeetCode](https://leetcode.com/problems/).
