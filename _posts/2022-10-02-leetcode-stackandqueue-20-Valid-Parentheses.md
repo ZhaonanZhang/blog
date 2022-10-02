@@ -14,7 +14,8 @@ Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Every close bracket has a corresponding open bracket of the same type.
 
-<img width="841" alt="image" src="https://user-images.githubusercontent.com/92517160/193479373-030dd277-c723-4f47-86a1-ca1bc143d73a.png">
+<img width="841" alt="image" src="https://user-images.githubusercontent.com/92517160/193480220-fe90ee8b-4f83-450b-a07d-5e5727a8e7a4.png">
+
 
 
 
