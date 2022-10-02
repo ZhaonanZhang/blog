@@ -21,7 +21,7 @@ Every close bracket has a corresponding open bracket of the same type.
 
 #### Thought
 
-Try the four steps for this problem:
+Try the [Four Steps](https://zhuanlan.zhihu.com/p/358088483)for this problem: 
 - **Simulation**: Simulate the running of the problem on a paper.
 
 - **Rules**: Try to summarize the general rules and characteristics of the topic.
